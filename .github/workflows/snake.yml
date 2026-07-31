@@ -9,6 +9,8 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    permissions:
+      contents: write # allow GITHUB_TOKEN to push the snake to the "output" branch
     steps:
       - name: Checkout
         uses: actions/checkout@v4
